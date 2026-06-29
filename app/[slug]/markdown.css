@@ -19,6 +19,10 @@
   @apply pt-8 opacity-60 dark:opacity-10;
 }
 
+.markdown :is(h2, h3, h4) {
+  scroll-margin-top: 2rem;
+}
+
 .markdown h2 {
   @apply mt-2 pb-8 text-3xl font-bold;
 }

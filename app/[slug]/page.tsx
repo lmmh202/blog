@@ -11,6 +11,7 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings"
 import rehypeSlug from "rehype-slug"
 import "./markdown.css"
 import { Utterances } from "../components/utterances"
+import { TableOfContents } from "../components/table-of-contents"
 import { getPosts } from "../posts"
 import { basePath } from "../config"
 
@@ -75,6 +76,8 @@ export default async function PostPage({ params }: PromiseParams) {
       </div>
 
       <Utterances />
+
+      <TableOfContents />
     </article>
   )
 }

@@ -1,9 +1,9 @@
 import type { NextConfig } from "next"
 
 // Single source of truth for the base path.
-// Project page (lmmh202.github.io/blog) -> "/blog".
-// User page or custom domain -> "".
-const basePath = "/blog"
+// User page (lmmh202.github.io) or custom domain -> "".
+// Project page (lmmh202.github.io/<repo>) -> "/<repo>".
+const basePath = ""
 
 const nextConfig: NextConfig = {
   // Build to static HTML (SSG). Generates the out/ directory.
@@ -14,7 +14,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath,
+  // Next.js rejects an empty basePath, so only set it when present.
+  ...(basePath ? { basePath } : {}),
   // Expose the base path to app code so raw asset URLs (e.g. <img src>) can be prefixed.
   env: {
     NEXT_PUBLIC_BASE_PATH: basePath,

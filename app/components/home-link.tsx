@@ -25,7 +25,7 @@ export function HomeLink() {
           transition: "--myColor1 0.2s ease-out, --myColor2 0.2s ease-in-out",
         }}
       >
-        leveluper.blog
+        lmmh202.github.io
       </span>
     </Link>
   )

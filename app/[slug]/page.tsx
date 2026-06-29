@@ -12,6 +12,7 @@ import rehypeSlug from "rehype-slug"
 import "./markdown.css"
 import { Utterances } from "../components/utterances"
 import { getPosts } from "../posts"
+import { basePath } from "../config"
 
 type PromiseParams = { params: Promise<{ slug: string }> }
 
@@ -53,7 +54,7 @@ export default async function PostPage({ params }: PromiseParams) {
             a: Link,
             img: ({ src, ...rest }) => {
               if (src && !/^https?:\/\//.test(src)) {
-                src = `/${slug}/${src}`
+                src = `${basePath}/${slug}/${src}`
               }
               return <img src={src} {...rest} />
             },

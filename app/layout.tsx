@@ -3,6 +3,7 @@ import "./globals.css"
 import { serif } from "./fonts"
 import Link from "next/link"
 import { HomeLink } from "./components/home-link"
+import { asset } from "./config"
 
 export const metadata: Metadata = {
   title: "leveluper -- by Minhyeong",
@@ -23,7 +24,7 @@ export default function RootLayout({
           <span className="relative top-[4px] italic">
             by{" "}
             <Link href="https://github.com/lmmh202" target="_blank">
-              <img alt="Minhyeong Lee" src="/avi.jpg" className="relative -top-1 mx-1 inline h-8 w-8 rounded-full" />
+              <img alt="Minhyeong Lee" src={asset("/avi.jpg")} className="relative -top-1 mx-1 inline h-8 w-8 rounded-full" />
             </Link>
           </span>
         </header>

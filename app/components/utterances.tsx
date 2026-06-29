@@ -9,7 +9,7 @@ export function Utterances() {
     const element = document.createElement("script");
 
     element.setAttribute("src", "https://utteranc.es/client.js");
-    element.setAttribute("repo", "1eeminhyeong/blog");
+    element.setAttribute("repo", "lmmh202/blog");
     element.setAttribute("issue-term", "pathname");
     element.setAttribute("label", "comment");
     element.setAttribute("theme", "github-light");

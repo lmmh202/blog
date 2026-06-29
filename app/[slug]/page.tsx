@@ -11,8 +11,18 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings"
 import rehypeSlug from "rehype-slug"
 import "./markdown.css"
 import { Utterances } from "../components/utterances"
+import { getPosts } from "../posts"
 
 type PromiseParams = { params: Promise<{ slug: string }> }
+
+// 빌드 시점에 생성할 모든 글 경로를 미리 알려준다 (static export 필수)
+export async function generateStaticParams() {
+  const posts = await getPosts()
+  return posts.map((post) => ({ slug: post.slug }))
+}
+
+// 위 목록에 없는 경로는 404 처리 (서버 fallback 없음)
+export const dynamicParams = false
 
 export default async function PostPage({ params }: PromiseParams) {
   const { slug } = await params

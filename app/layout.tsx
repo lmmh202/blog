@@ -22,7 +22,7 @@ export default function RootLayout({
 
           <span className="relative top-[4px] italic">
             by{" "}
-            <Link href="https://github.com/1eeminhyeong" target="_blank">
+            <Link href="https://github.com/lmmh202" target="_blank">
               <img alt="Minhyeong Lee" src="/avi.jpg" className="relative -top-1 mx-1 inline h-8 w-8 rounded-full" />
             </Link>
           </span>

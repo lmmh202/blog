@@ -6,7 +6,7 @@ import { HomeLink } from "./components/home-link"
 import { asset } from "./config"
 
 export const metadata: Metadata = {
-  title: "leveluper -- by Minhyeong",
+  title: "lmmh202.github.io -- by Minhyeong",
   description: "Personal Blog",
 }
 
